@@ -499,3 +499,29 @@ def preprocess_text(text):
         return text
 
 
+
+| Column Name  | Data Type       | Description                                                     |
+| ------------ | --------------- | --------------------------------------------------------------- |
+| `id`         | INTEGER / UUID  | Primary key (auto-generated)                                    |
+| `question`   | TEXT            | The user question                                               |
+| `answer`     | TEXT            | The chatbot response                                            |
+| `category`   | VARCHAR         | (Optional) Grouping, like "General", "Setup", "Compliance"      |
+| `tags`       | TEXT\[] or JSON | (Optional) Keywords like `["PrintSecure", "inspection", "GS1"]` |
+| `created_at` | TIMESTAMP       | When the entry was created                                      |
+| `updated_at` | TIMESTAMP       | Last modified date                                              |
+
+
+
+    | id | question                      | answer                                                  | category      | tags                                  | created\_at | updated\_at |
+| -- | ----------------------------- | ------------------------------------------------------- | ------------- | ------------------------------------- | ----------- | ----------- |
+| 1  | What is PrintSecure used for? | PrintSecure is used to inspect GS1 Data Matrix codes... | Functionality | \["PrintSecure", "GS1", "inspection"] | 2025-07-17  | 2025-07-17  |
+
+
+
+{
+  "question": "What is PrintSecure used for?",
+  "answer": "PrintSecure is used to inspect GS1 Data Matrix codes (2D codes)...",
+  "category": "Functionality",
+  "tags": ["PrintSecure", "GS1", "inspection"]
+}
+
