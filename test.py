@@ -65,7 +65,7 @@ class ChatAPIView(APIView):
             answer_data = self._search_local_database(corrected_question, user_question)
             if answer_data and answer_data.get("answer") and answer_data.get("source") not in ["none", "error"]:
                 confidence = answer_data.get("confidence", 0)
-                CONFIDENCE_THRESHOLD = 0.75
+                CONFIDENCE_THRESHOLD = 0.95  # Only consider exact matches for high confidence
 
                 # Format response with a conversational template
                 templates = [
@@ -82,6 +82,7 @@ class ChatAPIView(APIView):
                     "confidence": confidence,
                     "source": answer_data["source"],
                 }
+                # Include suggestions if confidence is below threshold or explicitly provided
                 if confidence < CONFIDENCE_THRESHOLD or answer_data.get("suggestions"):
                     response_data["suggestions"] = answer_data.get("suggestions", [])
 
@@ -167,30 +168,51 @@ class ChatAPIView(APIView):
                     qa.embedding = model.encode(preprocess_text(qa.question)).tolist()
                     qa.save()
 
-            # 1. Try near-exact match first
-            exact_match = find_near_exact_match(processed_question, questions, answers, threshold=0.8)
+            # 1. Try exact match (case-insensitive, exact text)
+            for idx, q in enumerate(questions):
+                if processed_question.lower() == preprocess_text(q).lower():
+                    return {
+                        "answer": answers[idx],
+                        "question": q,
+                        "confidence": 1.0,
+                        "source": "exact"
+                    }
+
+            # 2. Try near-exact match with stricter logic
+            exact_match = find_near_exact_match(processed_question, questions, answers, threshold=0.9)
             if exact_match:
+                # Always include suggestions for non-exact matches
+                vectorizer, question_vectors = get_vectorizer_and_vectors(questions)
+                best_index = questions.index(exact_match["question"])
+                suggestions = suggest_similar_questions(
+                    processed_question,
+                    questions,
+                    answers,
+                    vectorizer,
+                    question_vectors,
+                    exclude_index=best_index
+                )
+                exact_match["suggestions"] = suggestions[:3]
                 return exact_match
 
-            # 2. Semantic match
+            # 3. Semantic match
             threshold = 0.6 if len(processed_question.split()) <= 3 else 0.7
             semantic_match = get_best_match_semantic(processed_question, questions, answers, threshold=threshold)
             if semantic_match:
-                if semantic_match["confidence"] < 0.75:
-                    vectorizer, question_vectors = get_vectorizer_and_vectors(questions)
-                    best_index = questions.index(semantic_match["question"])
-                    suggestions = suggest_similar_questions(
-                        processed_question,
-                        questions,
-                        answers,
-                        vectorizer,
-                        question_vectors,
-                        exclude_index=best_index
-                    )
-                    semantic_match["suggestions"] = suggestions[:3]
+                vectorizer, question_vectors = get_vectorizer_and_vectors(questions)
+                best_index = questions.index(semantic_match["question"])
+                suggestions = suggest_similar_questions(
+                    processed_question,
+                    questions,
+                    answers,
+                    vectorizer,
+                    question_vectors,
+                    exclude_index=best_index
+                )
+                semantic_match["suggestions"] = suggestions[:3]
                 return semantic_match
 
-            # 3. TF-IDF fallback
+            # 4. TF-IDF fallback
             vectorizer, question_vectors = get_vectorizer_and_vectors(questions)
             tfidf_match = get_best_match_tfidf(processed_question, questions, answers, vectorizer, question_vectors, threshold=0.4)
             if tfidf_match:
@@ -203,11 +225,10 @@ class ChatAPIView(APIView):
                     question_vectors,
                     exclude_index=best_index
                 )
-                if tfidf_match["confidence"] < 0.75:
-                    tfidf_match["suggestions"] = suggestions[:3]
+                tfidf_match["suggestions"] = suggestions[:3]
                 return tfidf_match
 
-            # 4. Keyword fallback with suggestions
+            # 5. Keyword fallback with suggestions
             keyword_results = keyword_based_search(processed_question, questions, answers)
             if keyword_results:
                 return {
@@ -382,22 +403,23 @@ def keyword_based_search(query, questions, answers):
         logger.error(f"Keyword search error: {str(e)}")
         return []
 
-def find_near_exact_match(user_question, questions, answers, threshold=0.8):
+def find_near_exact_match(user_question, questions, answers, threshold=0.9):
     try:
         if not questions:
             return None
         uq = preprocess_text(user_question).lower()
         logger.debug(f"Searching near exact match for: '{uq}'")
 
-        # Substring match
+        # Substring match with stricter conditions
         for idx, q in enumerate(questions):
             q_clean = preprocess_text(q).lower()
-            if uq in q_clean or q_clean in uq:
+            # Require significant overlap, not just substring
+            if (uq in q_clean or q_clean in uq) and len(uq.split()) >= len(q_clean.split()) * 0.8:
                 logger.debug(f"Substring match found: '{questions[idx]}'")
                 return {
                     "answer": answers[idx],
                     "question": questions[idx],
-                    "confidence": 1.0,
+                    "confidence": 0.9,  # Lower confidence for substring matches
                     "source": "exact-substring"
                 }
 
@@ -411,7 +433,7 @@ def find_near_exact_match(user_question, questions, answers, threshold=0.8):
             return {
                 "answer": answers[index],
                 "question": questions[index],
-                "confidence": 0.9,
+                "confidence": 0.85,  # Lower confidence for fuzzy matches
                 "source": "fuzzy-exact"
             }
 
@@ -422,15 +444,18 @@ def find_near_exact_match(user_question, questions, answers, threshold=0.8):
         return None
 
 
-spellcheck_utils.py
 
+spellcheck_utils.py
 from spellchecker import SpellChecker
 import re
+import logging
+
+logger = logging.getLogger(__name__)
 
 def correct_spelling(text):
     try:
         spell = SpellChecker()
-        # Preserve specific terms (e.g., AGS-TM)
+        # Preserve specific terms
         custom_words = {'ags-tm', 'recipe', 'ai'}  # Add more as needed
         spell.word_frequency.load_words(custom_words)
 
@@ -446,7 +471,6 @@ def correct_spelling(text):
     except Exception as e:
         logger.error(f"Spelling correction error: {str(e)}")
         return text
-
 
 text_preprocessing.py
 
@@ -473,43 +497,5 @@ def preprocess_text(text):
     except Exception as e:
         logger.error(f"Text preprocessing error: {str(e)}")
         return text
-
-
-
-if populate_qa.py
-
-from chat.models import QA
-from sentence_transformers import SentenceTransformer
-from chat.text_preprocessing import preprocess_text
-
-model = SentenceTransformer('all-MiniLM-L6-v2')
-qa_pairs = [
-    ("How does AGS-TM work?", "AGS-TM is a system for managing tasks with automated scheduling."),
-    ("What is the purpose of AGS-TM?", "AGS-TM automates task management and improves efficiency."),
-    ("How to configure AGS-TM settings?", "Go to the AGS-TM dashboard and update the configuration options.")
-]
-for question, answer in qa_pairs:
-    embedding = model.encode(preprocess_text(question)).tolist()
-    QA.objects.create(question=question, answer=answer, embedding=embedding)
-
-settings.py
-
-LOGGING = {
-    'version': 1,
-    'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-        },
-    },
-    'loggers': {
-        '': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-    },
-}
 
 
