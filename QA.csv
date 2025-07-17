@@ -1,0 +1,454 @@
+questions,answers
+How can I achieve the perfect image quality for machine inspection using an industrial camera? (AGS-TM/TS) ?," To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+What settings should I optimize to get the best image quality from an AGS-TM/TS industrial camera for machine vision applications?," To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+How do I configure an AGS-TM/TS industrial camera for high-quality imaging in automated inspection systems?," To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+How can I ensure the highest image resolution and accuracy using an AGS-TM/TS camera for machine inspection purposes?," To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+What are the key factors to adjust for achieving optimal image clarity in machine inspection with an AGS-TM/TS camera?," To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+What methods can I use to obtain flawless visual output for automated inspection using an AGS-TM/TS camera?," To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+"What should I do if my product has a 2D (Data Matrix) barcode for second-level inspection?
+(AGS-TM/TS)","To configure barcode inspection in second-level processes:
+
+    Open the Inspection panel.
+    Go to Settings → Method (select the appropriate method).
+    Set Barcode_Type to Data_Matrix.
+    Choose the correct Barcode_Size (e.g., 10mm or 8mm).
+    Remaining parameters will auto-adjust based on design logic. (Note: Some manual adjustments may still be needed depending on the product.)
+    Trigger the machine to capture the image; the barcode will then be decoded."
+"What is the process for verifying a 2D Data Matrix barcode on a product using AGS-TM/TS in secondary inspection?
+
+","To configure barcode inspection in second-level processes:
+
+    Open the Inspection panel.
+    Go to Settings → Method (select the appropriate method).
+    Set Barcode_Type to Data_Matrix.
+    Choose the correct Barcode_Size (e.g., 10mm or 8mm).
+    Remaining parameters will auto-adjust based on design logic. (Note: Some manual adjustments may still be needed depending on the product.)
+    Trigger the machine to capture the image; the barcode will then be decoded."
+What’s the recommended way to set up barcode scanning for 2D codes in a second-tier inspection using AGS-TM/TS?,"To configure barcode inspection in second-level processes:
+
+    Open the Inspection panel.
+    Go to Settings → Method (select the appropriate method).
+    Set Barcode_Type to Data_Matrix.
+    Choose the correct Barcode_Size (e.g., 10mm or 8mm).
+    Remaining parameters will auto-adjust based on design logic. (Note: Some manual adjustments may still be needed depending on the product.)
+    Trigger the machine to capture the image; the barcode will then be decoded."
+How do I perform a second-level inspection of a 2D barcode using the AGS-TM/TS industrial vision system?,"To configure barcode inspection in second-level processes:
+
+    Open the Inspection panel.
+    Go to Settings → Method (select the appropriate method).
+    Set Barcode_Type to Data_Matrix.
+    Choose the correct Barcode_Size (e.g., 10mm or 8mm).
+    Remaining parameters will auto-adjust based on design logic. (Note: Some manual adjustments may still be needed depending on the product.)
+    Trigger the machine to capture the image; the barcode will then be decoded."
+"If my product has a 2D barcode, how can I use AGS-TM/TS for validation during a second-level check?","To configure barcode inspection in second-level processes:
+
+    Open the Inspection panel.
+    Go to Settings → Method (select the appropriate method).
+    Set Barcode_Type to Data_Matrix.
+    Choose the correct Barcode_Size (e.g., 10mm or 8mm).
+    Remaining parameters will auto-adjust based on design logic. (Note: Some manual adjustments may still be needed depending on the product.)
+    Trigger the machine to capture the image; the barcode will then be decoded."
+"I'm getting a 'Camera disconnected!' error—what could be causing this?
+(AGS-TM/TS)","This error may result from the following issues:
+
+    Loose or disconnected cable – Please check USB connections on both the camera and CPU sides.
+    Camera used by another application – Ensure no background processes are using the camera.
+    Hardware issue – Electrical disturbances such as earthing issues or back current may affect camera performance."
+Why is my AGS-TM/TS camera showing a 'Camera disconnected!' error?,"This error may result from the following issues:
+
+    Loose or disconnected cable – Please check USB connections on both the camera and CPU sides.
+    Camera used by another application – Ensure no background processes are using the camera.
+    Hardware issue – Electrical disturbances such as earthing issues or back current may affect camera performance."
+What could be the reason my AGS-TM/TS camera suddenly lost connection?,"This error may result from the following issues:
+
+    Loose or disconnected cable – Please check USB connections on both the camera and CPU sides.
+    Camera used by another application – Ensure no background processes are using the camera.
+    Hardware issue – Electrical disturbances such as earthing issues or back current may affect camera performance."
+Why did my industrial camera (AGS-TM/TS) stop communicating with the system?,"This error may result from the following issues:
+
+    Loose or disconnected cable – Please check USB connections on both the camera and CPU sides.
+    Camera used by another application – Ensure no background processes are using the camera.
+    Hardware issue – Electrical disturbances such as earthing issues or back current may affect camera performance."
+Why isn’t my AGS-TM/TS camera recognized by the software anymore?,"This error may result from the following issues:
+
+    Loose or disconnected cable – Please check USB connections on both the camera and CPU sides.
+    Camera used by another application – Ensure no background processes are using the camera.
+    Hardware issue – Electrical disturbances such as earthing issues or back current may affect camera performance."
+"I'm getting an 'Attributes not supported' error—what could be causing this?
+(AGS-TM/TS)","This message may be caused by:
+
+    Camera not detected – Check the hardware connection.
+    Initialization missing – Ensure the camera is properly initialized from all necessary software modules.
+    Configuration mismatch – Some attributes may not be supported or configured incorrectly."
+"What is the purpose of the 'Decode Test' function in the camera settings window?
+(AGS-TM/TS)","The 'Decode Test' is designed to:
+
+    Confirm that the camera can read and decode barcodes accurately.
+    Verify camera compatibility with the decoding system.
+    Ensure that camera settings are stable and correctly configured for barcode detection.
+    Detect potential issues before starting production."
+What is the role of the 'Decode Test' option in the AGS-TM/TS camera settings window?,"The 'Decode Test' is designed to:
+
+    Confirm that the camera can read and decode barcodes accurately.
+    Verify camera compatibility with the decoding system.
+    Ensure that camera settings are stable and correctly configured for barcode detection.
+    Detect potential issues before starting production."
+Why would I use the 'Decode Test' function in AGS-TM/TS camera settings?,"The 'Decode Test' is designed to:
+
+    Confirm that the camera can read and decode barcodes accurately.
+    Verify camera compatibility with the decoding system.
+    Ensure that camera settings are stable and correctly configured for barcode detection.
+    Detect potential issues before starting production."
+How does the 'Decode Test' work in the camera settings of AGS-TM/TS?,"The 'Decode Test' is designed to:
+
+    Confirm that the camera can read and decode barcodes accurately.
+    Verify camera compatibility with the decoding system.
+    Ensure that camera settings are stable and correctly configured for barcode detection.
+    Detect potential issues before starting production."
+What is the function of the 'Decode Test' setting in the AGS-TM/TS camera software?,"The 'Decode Test' is designed to:
+
+    Confirm that the camera can read and decode barcodes accurately.
+    Verify camera compatibility with the decoding system.
+    Ensure that camera settings are stable and correctly configured for barcode detection.
+    Detect potential issues before starting production."
+How to set camera settings?," 	
+
+To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+How do I configure the camera settings?," 	
+
+To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+What’s the procedure for setting up the camera options?," 	
+
+To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+What steps do I follow to modify the camera settings?," 	
+
+To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+How do I access and edit the camera setup?," 	
+
+To ensure optimal image quality, please follow the steps below:
+
+    Open the Camera Settings window.
+    Set Trigger Mode to Internal.
+    Check the lighting status (On/Off) and adjust accordingly.
+    Hardware Adjustments:
+        Set the Shutter Ring between 4 and 8.
+        Adjust the Focus Ring as per requirement.
+    Software Adjustments (Recommended by Kevision):
+        Exposure: 20000
+        Gain: 1
+        Gamma: 1
+    Save the camera settings."
+How to give Server Access to Client Station ?,Go to Client Registration Screen. Click on Registration Access. Enter Client Station IP Address. Press Save Button. 
+How do I allow a client station to connect to the server?,Go to Client Registration Screen. Click on Registration Access. Enter Client Station IP Address. Press Save Button. 
+What steps are needed to give a client access to the server?,Go to Client Registration Screen. Click on Registration Access. Enter Client Station IP Address. Press Save Button. 
+How can I enable server access for client workstation?,Go to Client Registration Screen. Click on Registration Access. Enter Client Station IP Address. Press Save Button. 
+How do I share server resources with a client station?,Go to Client Registration Screen. Click on Registration Access. Enter Client Station IP Address. Press Save Button. 
+What settings should I change to allow a client to access the server?,Go to Client Registration Screen. Click on Registration Access. Enter Client Station IP Address. Press Save Button. 
+How to Add Client Station on Server ?,Go to Client Registration Screen. Click on Add Button. Add Client Screen will be Opne. Select Client IP From drop down. Fill all Details and Click on Save button. Client Staion will be Registered at Server.
+How do I register a client station on the server?,Go to Client Registration Screen. Click on Add Button. Add Client Screen will be Opne. Select Client IP From drop down. Fill all Details and Click on Save button. Client Staion will be Registered at Server.
+How do I set up a client station on the server network?,Go to Client Registration Screen. Click on Add Button. Add Client Screen will be Opne. Select Client IP From drop down. Fill all Details and Click on Save button. Client Staion will be Registered at Server.
+How do I integrate a new client machine into the server system?,Go to Client Registration Screen. Click on Add Button. Add Client Screen will be Opne. Select Client IP From drop down. Fill all Details and Click on Save button. Client Staion will be Registered at Server.
+What do I need to do to add a client device to the server network?,Go to Client Registration Screen. Click on Add Button. Add Client Screen will be Opne. Select Client IP From drop down. Fill all Details and Click on Save button. Client Staion will be Registered at Server.
+How do I configure the server to recognize a new client station?,Go to Client Registration Screen. Click on Add Button. Add Client Screen will be Opne. Select Client IP From drop down. Fill all Details and Click on Save button. Client Staion will be Registered at Server.
+Client Request not Found !,Please Go to Client Station and Send Request to Server for Registration.
+Why am I getting a 'Client Request Not Found' error?,Please Go to Client Station and Send Request to Server for Registration.
+The server is unable to find the client request — what should I do?,Please Go to Client Station and Send Request to Server for Registration.
+What causes the 'Client Request Not Found' message to appear?,Please Go to Client Station and Send Request to Server for Registration.
+Why isn't the client request showing up in the system?,Please Go to Client Station and Send Request to Server for Registration.
+Why can't the server find the client's request?,Please Go to Client Station and Send Request to Server for Registration.
+How do I resolve the 'Client Request not Found' error?,Please Go to Client Station and Send Request to Server for Registration.
+How to Unregister Client Station ?,Go to Client Registration Screen. Select Client IP from Client Registration Screen. Click on Update Button. Change Status from Register to UnRegister. Click on save Button. Selected Client Station will be UnRegister.
+How to update Registration Details ?,"Go to Client Registration Screen. Select Client IP from Client Registration Screen. Click on Update Button. Update Required Detais like Line Number, Plant Name, Location , Registration Status, Packaging Level, Regualtory & System Name. Then Click on Save Button.  Selected Client Station Details will be Updated."
+Please Suggest Packaging Level Order for Register Client Station.,"Packaging Level Order Mustbe Station wise in Accending Order. i.e Packaging Level for PrintSecure is 0, AggreSecure Stellar is 2 & AggreSecure Comet is 3. "
+How to Delete Registered Station ?,Go to Client Registration Screen. Click on Delete Button. Click on Ok to Delete & Click on Cancel to not Delete.
+How to Add Product in KevSecure Server ?,"Go to Server Settings. Go to Product List. Click on Add Product Button. Enter Product Name, Product Description, Select Regulatory. Click on Save Button. Enter Username & Password for Authentication. Click Ok. After Successfull Authentication Product will Added Successfully. Now Go for Add GTIN in Created Product."
+How to Add GTIN for Selected Product ?,"Go to Server Settings. Go to Product List.Select Product. Click on Add GTIN Button. Select Packaging Level, Company Prefix, Enter Product Code. Combination of This three Value will Create GTIN-14 with Checkdigit As per GS1. Then Select Server Type From Where you want to Download UIDs. Select Batch Type like Serialization \ Parent Child As per Requirement. Enter Packsize (Layers x Items in Layer). Select Barcode Type 2D \ SSCC. If Server Type is KevSecuer  and Barcode Type is 2D then need to Select UID Type & UID Length which is available in Server. Add HRF Value with Selection of HRF Application Identifier. After Fill all Details Click on Save Button.Enter Username & Password for Authentication. Click Ok. After Successfull Authentication GTIN will Added Successfully."
+What values are needed to generate a GTIN-14?,"You need to select the Packaging Level, Company Prefix, and enter the Product Code. The combination of these values generates the GTIN-14 with a check digit according to GS1 standards."
+What is the purpose of selecting a Batch Type?,"The Batch Type defines the type of batch being created, such as Serialization or Parent-Child, depending on your requirements."
+"What does the Packsize refer to, and how is it entered?",The Packsize refers to the number of Layers x Items in Layer and needs to be entered as per the product configuration.
+How to Update GTIN Details ?,Open the Server Settings section.Go to the Product List & Select the GTIN which you want to Update its Details. Click on Update GTIN Button. Update Nessessory Details. Click on Update Button.Enter Username & Password for Authentication. Click Ok. After Successfull Authentication GTIN details will be updated Successfully.
+How to Deleted GTIN ?,Open the Server Settings section.Go to the Product List & Select the GTIN which you want to Delete. Click on Delete button. Click on Ok to Delete GTIN.Enter Username & Password for Authentication. Click Ok. After Successfull Authentication GTIN details will be Deleted Successfully.
+How to Inactive Product ?,Open the Server Settings section.Go to the Product List & Select the Product which you want to inactive. Click on Update Product button. Change Status from Active to Inactive.Click on Save Button. Enter Username & Password for Authentication. Click Ok. After Successfull Authentication Product will be Inactive Successfully.
+How to Inactive Product GTIN ?,Open the Server Settings section.Go to the Product List & Select the GTIN which you want to inactive. Click on Update GTIN button. Change Status from Active to Inactive.Click on Save Button. Enter Username & Password for Authentication. Click Ok. After Successfull Authentication GTIN will be Inactive Successfully.
+While Adding Product if Barcode Type is SSCC then which parameter need to Select ?,If Barcode Type is SSCC then Select SSCC Prefix & Filter Value.
+How to Create SSCC Range ?,"Go to Server Settings. Go to SSCC Details. Select Company Prefix for which you want to create SSCC. Click on Add button. Enter Start Range, Quantity & Extention Digit. Select Regulatory. Click on Save button. SSCC Range will be Added Successfully."
+How to Close SSCC Range ?,Go to Server Settings. Go to SSCC Details. Select SSCC Range From List. Click on Update button. Change Status from Open to Close. Click on Update button. SSCC Range will be Closed Successfully.
+How SSCC will be Formed?,As per GS1 Standard 18 Digit SSCC Number is Combination of Extention Digit + Company Prefix + Sequential Number + Check Digit.
+What information is required to register the Print Secure system with the KEV Secure Server?,"You need the following details:
+1)IP Address
+2)Mac Address
+3)LineNumber
+4)Plant Name
+5)Location
+6)System Name
+7)Packaging Level
+"
+ What happens after submitting the registration request to the server?, The server processes the request and registers the Print Secure system successfully.
+ How do you create a new product on the product code server?," You must define:
+1)Product Code
+2)Company Prefix
+3)Composed GTIN
+4)HRF1 to HRF5 fields (as required)
+"
+,"What is available in the main menu after login at the Client Station?
+The main menu contains:
+
+1)Teach
+2)Inspection
+3)Recipe
+4)Batch Detail
+5)Camera Setting
+6)Printer Setting
+7)Reconciliation
+8)Fault Image
+9)System Setting
+10)Server Setting
+11)Audit Report
+12)Production Report
+13)Info"
+How do you create a new recipe at the client station?,"1. Go to Recipe.
+2. Select the product from the dropdown.
+3. Choose the production line.
+4. Select code types like 1D, 2D, OCV/OCR, or Pharma Code.
+5. Save the recipe.
+"
+How do you add a new batch in the system?,"1. Go to Batch Detail > Product Change > Add Batch.
+2. Select product and GTIN (as per packaging level).
+3. Enter expiry date, item layers (e.g., 1x1).
+4. Choose regulatory body (e.g., DGFT, EU, NMPA).
+5. Input batch number, FG code, HRF1, HRF2, etc.
+6. Click Add Batch.
+"
+What settings should be verified before starting production?,"1)Printer Settings
+2)Camera Settings
+3)Hardware Settings
+"
+What steps are involved in the teach process?,"1. Go to Teach, start machine, grab image.
+2. Draw ROI for all relevant areas.
+3. Train 2D barcode in the Barcode tab.
+4. Train GTIN, Batch, Expiry, and OCR text in OCV/OCR tab.
+5. Click Simulate – ensure it shows green.
+6. Click Next to confirm "" Recipe Teach Successfully.""
+"
+How do you start production inspection?,"1. Go to Inspection.
+2. Start the machine.
+3. Printed cartons will be automatically inspected based on barcode accuracy, OCR, and print quality.
+"
+What are setps for AGS-TM insepction,"Following step required for start the inspection for AGS-TM/TS
+1)Start the inspection process using the Start command from the screen.
+2)Fill in the Number items that were specified during batch creation for the respective layer.
+3)Trigger the camera to grab or capture an image during the inspection.
+"
+ How can I achieve the perfect image quality for machine inspection using an industrial camera?,"To achieve the perfect image quality for machine inspection, follow these key steps:-  
+1) Open Camera Setting
+2) Change trigger mode into Internal
+3) Check Lighting Status:- On/Off
+4) Hardware Side Setting:- Set Shutter ring setting between 4 and 8    as well as   Set Focus ring as per required.
+5) Software Side Setting :-  Set Exposure :- 20000 , Gain :- 1 , Gamma :- 1 (Note:- Recommended by Kevision)
+6) Save Camera Setting.
+"
+What should i do if my product has 2d ( Data Matrix ) barcode for inspect in second level Inspection,"To inspect the 2d barcode in second level inspection, follow these key steps:-
+1) Open Inspection 
+2) Select Tab on top left side of window:- Setting -> Method(as per selection) 
+3) Set Barcode_type selection as per required :- Data_Matrix
+4) Set Barcode_Size as per required :- 10mm or 8mm 
+5) Other parameter are changed as per design automatically. ( Note :- In some of the case it will change as per requirement)
+6) Trigger the machine for grab the image and the barcode will be decoded.
+"
+I'm getting a 'Camera disconnected!' error—what could be causing this?,"The 'Camera disconnected!' error usually occurs due to several possible reasons. Here are some common causes:-
+1) Loose or unplugged camera cable :- Check USB cable on both the end of camera and CPU.
+2) Conflicts with other applications using the camera :- Camera is occupied by any other application in backend
+3) Hardware malfunction :- Earthing , Back Current maybe impact to Camera.
+"
+  I'm getting a ' Attributes not supported ' error—what could be causing this?,"The Camera Attributes not supported error usually occurs due to several possible reasons. Here are some common causes:-
+1) Hardware Not Detected :- Check camera connection with machine.
+2) Initialization Missing :- Camera not initialize from other module
+3) Configuration Error :- Attribute not configured as per requirement.
+"
+What is the purpose of the 'Decode Test' function in the camera settings window?,"1)The 'Decode Test' function in the camera settings window is typically used to verify that the camera feed can be successfully read and processed. 
+2)It checks if the system can decode the Barcode properly.
+3)ensuring that the camera is functioning and compatible with the software.
+4)This test helps ensure that the camera settings are stable and accurate for decoding barcodes, allowing issues to be identified and resolved before starting actual production.
+"
+What is step to configure AGS-TM/CMS Printer?," AGS-TM/CMS Printer Configuration – Step-by-Step Process
+1. Open the Client Station and go to Printer Setting from the main menu.
+2. In the Printer Setting window, enter the IP address assigned by the IT team (must be a valid network IP).
+3. Set the Port Number as either:
+6101 (commonly used for thermal printers), or
+9100 (standard for network printers).
+4. Click the Configure button to test communication with the printer.
+5. If the connection is successful, a green indicator will appear next to the Configure button.
+6. Click Save to store the printer settings.
+7. From the PRN file dropdown, select the required print format (PRN file).
+8. Click Send Test Print to send a sample label to the printer and verify print functionality.
+9. Once the test print is successful, click Save again to finalize the configuration.
+"
+Where do you configure the AGS-TM/CMS printer settings?,You configure it under the Printer Setting section of the client station software.
+What IP address should be set for the printer?, Use a valid network IP provided by the IT team.
+Which port number should be used for the printer?,"Set the port to either 6101 or 9100, depending on the printer model and network configuration."
+ What action should be taken after entering the IP and port?, Click the Configure button in the Printer Setting panel.
+How do you know if the printer communication is successful?,"A green indicator will appear next to the Configure button, indicating successful communication with the printer."
+What should you do after the printer is successfully configured?,"1. Click Save Settings.
+2. Select the PRN file from the dropdown list of available templates or formats.
+"
+,
+ What confirms that the printer setting process is completed?," A confirmation message shows that the settings are saved successfully, and a test print is completed."
+How do you configure a printer in the PrintSecure system?,"To configure a printer in PrintSecure:
+1. Go to the Printer Setting menu.
+2. Enter the IP address assigned by the IT team.
+3. Set the port number as:
+3001 for Videojet printers
+20000 for Domino printers
+4. Click the Configure button.
+5. If the connection is successful, the red indicator will turn green.
+6. Click Job List Upload to fetch available jobs from the printer.
+7. Select the desired job from the Job List dropdown.
+8. Click the Job Select button to apply the job.
+9. Click Save to complete and store the printer configuration.
+"
+How do you configure the Hardware Settings in the PrintSecure system?,"To configure the hardware settings in PrintSecure:
+1. Open the Hardware Setting window.
+2. Select the COM port that matches the one used by the CPU.
+3. Set the Output Delay (range: 1–9999); the ideal value is 10 mm.
+4. Set Output Type to ""Fixed Time"" so the output works for a defined duration.
+5. Set Output Duration / Flapper On Time (range: 1–9999); the ideal value is 30 mm.
+6. Set Output Function to ""Reject Output"", so the flapper activates when a product is rejected.
+7. Set Output Polarity to ""High"".
+8. Tick ""Rejection Verification"" to ensure the rejected carton reaches the rejection box.
+9. Set Inactive Period (range: 1–9999); the ideal value is 60–100 mm.
+10. Set Light Timing (range: 1–9999); the ideal value is 50–70 ms.
+11. Set Light Flash Parameter to ""Light & Cam Flash"" so both the light and camera trigger together.
+12. Set Rejection Delay / Rejection Sensor to Rejection Station (range: 1–9999); the ideal value is 50–70 mm.
+"
+"How do you configure the camera settings in the PrintSecure system , and what are the recommended values?","To configure the camera in PrintSecure:
+1. Go to the Camera Setting menu in the client station.
+2. Set the Exposure value — the recommended setting is 500 (may vary based on lighting conditions).
+3. Set the Gain — the suggested value is 18 for standard environments.
+4. Adjust White Balance and Focus if available, based on print contrast and clarity.
+5. Use the Live Preview feature to fine-tune image quality.
+6. Save the camera settings once the image is clear and sharp for OCR/barcode reading.
+"
+What are the recommended camera settings for the AGS-TM system?,"Go to the Camera Setting section in the PrintSecure software.
+Set Exposure to 20000 for AGS-TM camera (ideal for standard lighting conditions).
+Adjust Gain as needed (recommended: 10–20) → Then Save the settings.
+"
